@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <title>Acasă - Despre Fotbal</title>
+  <style>
+    body {
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    marquee {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      font-size: 18px;
+    }
+    nav {
+      margin: 20px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .content {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #000;
+    }
+    ul {
+      text-align: left;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    h2 {
+      margin-top: 40px;
+      border-bottom: 2px solid yellow;
+      padding-bottom: 8px;
+    }
+    video {
+      margin-top: 20px;
+      border: 2px solid white;
+      border-radius: 10px;
+    }
+    p, li {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    img.minge {
+      display: block;
+      margin: 20px auto;
+      max-width: 200px;
+      border-radius: 10px;
+      border: 2px solid white;
+    }
+  </style>
+</head>
+<body>
+  <marquee>⚽ Bine ai venit pe site-ul dedicat sportului rege – fotbalul! ⚽</marquee>
+
+  <nav>
+    <a href="index.html">Acasă</a>
+    <a href="echipe.html">Echipe celebre</a>
+    <a href="fotbalisti.html">Fotbaliști celebri</a>
+    <a href="https://www.fifa.com" target="_blank">FIFA</a>
+  </nav>
+
+  <div class="content">
+    <h1>Despre Fotbal</h1>
+    <p><strong>Fotbalul</strong> este sportul cel mai popular din lume, cu peste 4 miliarde de fani la nivel global și milioane de jucători amatori și profesioniști.</p>
+
+    <h2>Istoria Fotbalului</h2>
+    <p>Fotbalul modern s-a născut în Anglia, în secolul al XIX-lea. Primele reguli au fost oficializate în 1863 când s-a înființat Asociația Engleză de Fotbal (The Football Association - FA). Înainte de aceasta, existau diferite forme locale de jocuri cu mingea, inclusiv în China antică (Jianzi) și în Grecia sau Roma antică.</p>
+    
+    <!-- Imaginea mingii -->
+    <img src="minge.jpg" alt="Mingea de fotbal" class="minge" />
+    
+    <p>Pe măsură ce fotbalul a câștigat popularitate, în 1904 a fost creată FIFA (Fédération Internationale de Football Association) pentru a reglementa competițiile internaționale și pentru a standardiza regulile.</p>
+
+    <h2>Regulile de bază ale fotbalului</h2>
+    <ul>
+      <li>Două echipe a câte 11 jucători</li>
+      <li>Durata unui meci este de 90 de minute, împărțită în două reprize de 45 de minute</li>
+      <li>Scopul este să marchezi goluri în poarta adversă folosind în principal picioarele</li>
+      <li>Golurile pot fi anulate dacă mingea iese în afara terenului sau dacă există faulturi</li>
+      <li>Jucătorii nu au voie să atingă mingea cu mâna, cu excepția portarului în propria careu</li>
+    </ul>
+
+    <h2>Dezvoltarea fotbalului în lume</h2>
+    <p>Fotbalul a devenit rapid un fenomen mondial, cu ligi profesioniste în aproape toate țările. Evenimente ca <strong>Cupa Mondială FIFA</strong> atrag miliarde de telespectatori și creează momente istorice în sport.</p>
+    <p>În România, fotbalul a început să se dezvolte la începutul secolului XX, iar echipe precum Steaua București și Dinamo București sunt printre cele mai cunoscute.</p>
+
+    <h2>Curiozități despre fotbal</h2>
+    <ul>
+      <li>Cel mai rapid gol înregistrat a fost marcat în doar 2 secunde.</li>
+      <li>Primul Campionat Mondial a avut loc în 1930, în Uruguay.</li>
+      <li>Brazilia este singura echipă care a participat la toate edițiile Cupei Mondiale.</li>
+      <li>Fotbalul este singurul sport care poate fi jucat oficial și pe plajă, în sală sau pe teren normal.</li>
+    </ul>
+    
+<h2>🎯 Roata Fotbalului</h2>
+<p>Apasă pe buton pentru a descoperi o echipă legendară la întâmplare!</p>
+
+<button onclick="alegeEchipa()" style="padding: 12px 20px; font-size: 18px; border: none; background-color: red; color: white; border-radius: 8px; cursor: pointer;">Învârte Roata</button>
+
+<p id="echipa-afisata" style="margin-top: 20px; font-size: 24px; font-weight: bold;"></p>
+
+<script>
+  const echipe = [
+    "Real Madrid 🇪🇸",
+    "FC Barcelona 🇪🇸",
+    "Manchester United 🇬🇧",
+    "Bayern München 🇩🇪",
+    "AC Milan 🇮🇹",
+    "Juventus 🇮🇹",
+    "Ajax Amsterdam 🇳🇱",
+    "Liverpool 🇬🇧",
+    "Paris Saint-Germain 🇫🇷",
+    "Dinamo Bucuresti 🇷🇴"
+  ];
+
+  function alegeEchipa() {
+    const randomIndex = Math.floor(Math.random() * echipe.length);
+    const echipa = echipe[randomIndex];
+    document.getElementById("echipa-afisata").textContent = `🔊 Echipa aleasă: ${echipa}`;
+  }
+</script>
+
+    <h2>Video despre Fotbal</h2>
+    <p>Urmărește acest videoclip care surprinde istoria, emoțiile și momentele magice ale fotbalului:</p>
+    <video width="700" controls>
+      <source src="video.mp4" type="video/mp4" />
+    </video>
+
+    <h2>Sunet tematic </h2>
+    <audio controls>
+      <source src="sunet.mp3" type="audio/mpeg" />
+    </audio>
+        <h2>Cele mai usoare skill-uri pe care le poti invata</h2>
+    
+
+    <iframe width="700" height="400" 
+            src="https://www.youtube.com/embed/Xim8-lUZnsA" 
+            title="Video despre fotbal" 
+            frameborder="0" 
+            allowfullscreen 
+            style="border-radius: 10px; border: 2px solid white; margin-top: 20px;">
+    </iframe>
+
+  </div>
+</body>
+</html>
